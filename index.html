@@ -49,10 +49,6 @@
 						<b><label for="to-input">To</label></b>
 						<input type="search" class="form-control" id="to-input" placeholder="To">
 					</div>
-					<div class="form-group">
-						<b><label for="to-input">Step At</label></b>
-						<input type="text" class="form-control" placeholder="Step At">
-					</div>
 					<button id="submit" type="submit" class="btn btn-primary">Booking</button>
 				</div>
 				<!-- right col -->
@@ -63,7 +59,7 @@
 					</div>
 					<div class="form-group">
 						<b><label for="to-input">Price per KM</label></b>
-						<label id="price" class="form-text">5 USD</label>
+						<label id="price" class="form-text">Press on the Booking button to calculate...</label>
 					</div>
 					<div class="form-group">
 						<b><label for="to-input">Total Price</label></b>
@@ -160,7 +156,7 @@
 			var end = new google.maps.LatLng(locations[1].lat(), locations[1].lng());
 			var distance=calcDistance(start, end);
 			value_distance.innerHTML=distance;
-			value_price.innerHTML=(distance * 5) + " USD"; // We can use .toFixed()...
+			value_price.innerHTML="₹"+(distance * 15); // We can use .toFixed()...
 			var bounds = new google.maps.LatLngBounds();
 			bounds.extend(start);
 			bounds.extend(end);
